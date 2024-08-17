@@ -3,9 +3,10 @@ const goods = [
     { title: 'Socks', price: 50 },
     { title: 'Jacket', price: 350 },
     { title: 'Shoes', price: 250 },
+    {}
   ];
   
-  const renderGoodsItem = (title, price) => {
+  const renderGoodsItem = ({title = 'nothing', price = 0}) => {
     return `
       <div class="goods-item">
         <h3>${title}</h3>
@@ -15,8 +16,8 @@ const goods = [
   };
   
   const renderGoodsList = (list) => {
-    let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
-    document.querySelector('.goods-list').innerHTML = goodsList;
+    let goodsList = list.map(item => renderGoodsItem(item));
+    document.querySelector('.goods-list').innerHTML = goodsList.join(' ');
   }
   
   renderGoodsList(goods);

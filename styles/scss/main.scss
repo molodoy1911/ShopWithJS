@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import '_variables';
+@import 'blocks/_body';
+@import 'blocks/header/_header';
+
+.goods-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    .goods-item {
+        border: 1px solid black;
+        height: 300px;
+        width: 200px;
+        margin: 10px;
+        h3, p {
+            font-family: "Rubik", sans-serif;
+            text-align: center;
+        }
+    }
+}

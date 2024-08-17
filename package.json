@@ -1,0 +1,16 @@
+{
+  "name": "shopwithjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+  "sass-dev": "sass --watch --update --style=expanded styles/scss:styles/css",
+  "sass-prod": "sass --no-source-map --style=compressed styles/scss:styles/css"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}

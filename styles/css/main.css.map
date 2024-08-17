@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/main.scss","../scss/blocks/_body.scss","../scss/blocks/header/_header.scss","../scss/_variables.scss"],"names":[],"mappings":"AAAQ;ACAR;EACI;;;ACAJ;EACI;EACA,kBCHQ;EDIR;EACA;EACA;EACA;;AACA;EACI;EACA;EACA;;AAEJ;EACI;;AACA;EACI;;;AFXZ;EACI;EACA;EACA;;AACA;EACI;EACA;EACA;EACA;;AACA;EACI;EACA","file":"main.css"}
