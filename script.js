@@ -1,29 +1,6 @@
-function makeDETRequest(url) {
-  return new Promise((resolve, reject) => {
-    var xhr;
-
-    if (window.XMLHttpRequest) {
-      xhr = new XMLHttpRequest();
-    } else if (window.ActiveXObject) {
-      xhr = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          resolve(xhr.responseText);
-        } else {
-          reject(`Error: ${xhr.status}`);
-        }
-      } 
-    }
-
-    xhr.open('GET', url, true);
-    xhr.send();
-  });
-}
-
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+const makeDETRequest = (url) => fetch(url)
+  .then((res) => res.json());
 
 class GoodsItem {
   constructor(product_name = 'nothing', price = 0) {
@@ -48,7 +25,7 @@ class GoodsList {
   fetchGoods() {
     return makeDETRequest(`${API_URL}/catalogData.json`)
       .then((goods) => {
-        this.goods = JSON.parse(goods);
+        this.goods = goods;
       })
       .catch((error) => {
         console.error(error);
